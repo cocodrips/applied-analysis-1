@@ -6,7 +6,7 @@
   };
 
   this.po = function(N, K, data) {
-    var d, f, graphHeight, graphWidth, i, l, link, linkDist, maximum, maximumY, numLink, p, poisson, real, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _n, _ref;
+    var d, f, graphHeight, graphWidth, i, link, linkDist, maximum, maximumY, numLink, p, poisson, real, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _ref;
     f = function(n) {
       var i, m, _i;
       if (n === 0) {
@@ -62,12 +62,8 @@
       poisson.push([i, p]);
     }
     maximumY = Math.max(poisson[K][1], maximumY);
-    graphWidth = 500 / (maximum + 1);
+    graphWidth = Math.min(25, 500 / (maximum + 1));
     graphHeight = 300 / maximumY;
-    for (_n = 0, _len4 = linkDist.length; _n < _len4; _n++) {
-      l = linkDist[_n];
-      console.log(graphHeight * l[1]);
-    }
     real = d3.select("#real").selectAll("div").data(linkDist).enter().append("div").attr("class", "bar").style("left", function(d) {
       return graphWidth * d[0] + "px";
     }).style("bottom", 0).style("width", graphWidth + "px").style("height", function(d) {

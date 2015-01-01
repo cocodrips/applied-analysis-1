@@ -39,12 +39,9 @@
     poisson.push([i, p])
 
   maximumY = Math.max(poisson[K][1], maximumY)
-  graphWidth = 500 / (maximum + 1)
+
+  graphWidth = Math.min(25, 500 / (maximum + 1))
   graphHeight = 300 / maximumY
-
-  for l in linkDist
-    console.log graphHeight * l[1]
-
 
   real = d3.select("#real").selectAll("div")
   .data(linkDist)
