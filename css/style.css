@@ -1,0 +1,48 @@
+.node {
+    opacity: 0.5;
+
+}
+
+.node:hover {
+    opacity: 1;
+}
+
+.link {
+    stroke: rgba(38, 38, 39, 0.6);
+    stroke-opacity: 0.3;
+}
+
+.bar, .poisson {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.bar {
+    background-color: rgba(118, 201, 200, 0.4);
+}
+
+.bar:hover {
+    background-color: rgba(118, 201, 200, 1.0);
+}
+
+.poisson {
+    background-color: rgba(244, 141, 151, 0.4);
+}
+
+.poisson:hover {
+    background-color: rgba(244, 141, 151, 1.0);
+}
+
+#po, #real {
+    height: 300px;
+    width: 550px;
+}
+
+.axis {
+    position: absolute;
+    bottom: -22px;
+    text-align: center;
+}

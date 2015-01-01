@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="cocodrips">
+  <title>Random Graph.</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="css/layouts/side-menu.css">
+  <!--<![endif]-->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+
+<div id="layout">
+  <div id="main">
+    <div class="header">
+      <h1>Random Graph</h1>
+
+      <h2>Set parameters</h2>
+
+      <form action="" class="pure-form" method="get">
+        <fieldset>
+          N = <input id="N" type="text" name="N" placeholder="100">
+          k = <input id="K" type="text" name="K" placeholder="3">
+          <button type="submit" class="pure-button pure-button-primary">Redraw</button>
+        </fieldset>
+      </form>
+
+    </div>
+
+
+    <div class="content">
+      <h2 class="content-subhead">Generate and visualize a random graph with p=k/N</h2>
+      <div id="graph"></div>
+      <h2 class="content-subhead">link</h2>
+        <div class="poisson" style="position: relative; padding: 5px;">Poisson</div>
+        <div class="bar" style="position: relative; padding: 5px;">Real</div>
+      <div style="position: relative; height: 300px">
+        <div id="po"></div>
+        <div id="real"></div>
+
+      </div>
+      <h2 class="content-subhead">Link</h2>
+      <a href="http://d3js.org/">D3.js - Data-Driven Documents</a>
+      
+
+
+    </div>
+  </div>
+</div>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/draw.js"></script>
+<script type="text/javascript" src="js/graph.js"></script>
+
+
+</body>
+</html>
